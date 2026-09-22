@@ -1,0 +1,40 @@
+.curriculum-container {
+  max-width: 1320px;
+  margin: 80px auto 0;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.curriculum-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
+  gap: 16px;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: -0.32px;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .curriculum-container {
+    margin: 40px auto 0;
+    padding: 0 16px;
+  }
+
+  .curriculum-box {
+    grid-template-columns: 1fr;
+  }
+
+  .span-two {
+    grid-column: 1 / -1; 
+  }
+}

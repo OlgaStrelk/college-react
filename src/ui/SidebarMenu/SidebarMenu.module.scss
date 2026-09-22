@@ -1,0 +1,178 @@
+$font-geologica: "Geologica", Helvetica, sans-serif;
+$color-text-primary: #191919;
+$color-text-secondary: #19191999;
+
+.menu {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-title {
+  font-family: $font-geologica;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 120%;
+  padding-bottom: 24px;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-item {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-align: left;
+  font-family: $font-geologica;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 140%;
+  color: $color-text-secondary;
+}
+
+.menu-item.active {
+  position: relative;
+  padding-left: 12px;
+  color: $color-text-primary;
+}
+
+.menu-item.active::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  border-radius: 50%;
+  background-color: $color-text-primary;
+  width: 4px;
+  height: 4px;
+}
+
+.dropdown-container {
+  display: none;
+}
+
+.mobile-menu-title {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .menu {
+    width: 100%;
+    gap: 40px;
+  }
+
+  .menu-title {
+    display: none;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .dropdown-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #efeeea;
+    border: 1px solid #19191926;
+    border-radius: 16px;
+    padding: 12px 16px;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+  }
+
+  .mobile-menu-title {
+    display: block;
+    font-family: $font-geologica;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: -0.72px;
+  }
+
+  .dropdown-container.is-open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .dropdown-toggle {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .dropdown-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #191919;
+    line-height: 20px;
+    margin-top: -1px;
+  }
+
+  .expand-icon {
+    justify-self: end;
+    width: 32px;
+    height: 32px;
+    transition: transform 0.5s ease;
+  }
+
+  .rotate-icon {
+    transform: rotate(180deg);
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    right: -1px;
+    background-color: #efeeea;
+    border: 1px solid #19191926;
+    border-top: none;
+    border-radius: 0 0 16px 16px;
+    z-index: 10;
+  }
+
+  .dropdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #191919;
+    line-height: 19.2px;
+    cursor: pointer;
+
+    &:hover {
+      color: #191919;
+    }
+  }
+
+  .dropdown-item.active {
+    color: $color-text-primary;
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .dropdown-item.active::before {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    border-radius: 50%;
+    background-color: $color-text-primary;
+    width: 4px;
+    height: 4px;
+  }
+}

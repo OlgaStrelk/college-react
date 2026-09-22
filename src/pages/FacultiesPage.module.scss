@@ -1,0 +1,77 @@
+$font-geologica: "Geologica", Helvetica, sans-serif;
+$color-background: #efeeea;
+$color-text-primary: #191919;
+$color-text-secondary: #19191999;
+$color-accent: #0b4a4c;
+$color-border: #19191926;
+.container {
+  max-width: 1320px;
+  margin: 0 auto 0;
+  padding: 120px 15px 0;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.menu {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-title {
+  font-family: $font-geologica;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 120%;
+  padding-bottom: 24px;
+}
+
+.menu button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-align: left;
+  font-family: $font-geologica;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 140%;
+  color: #19191999;
+}
+
+.menu button.active {
+  position: relative;
+  padding-left: 12px;
+  color: #191919;
+}
+.menu button.active::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  border-radius: 50%;
+  background-color: #191919;
+  width: 4px;
+  height: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 60px 15px 0;
+  }
+  .menu {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 12px;
+    min-width: auto;
+    margin-bottom: 32px;
+  }
+  .menu::-webkit-scrollbar {
+    display: none;
+  }
+}

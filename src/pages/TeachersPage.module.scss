@@ -1,0 +1,66 @@
+$font-geologica: "Geologica", Helvetica, sans-serif;
+$color-background: #efeeea;
+$color-text-primary: #191919;
+$color-border: #19191926;
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 120px 15px 160px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.content {
+  flex: 1;
+}
+
+.title {
+  font-family: $font-geologica;
+  color: var(--Text-secondary, #19191999);
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 140%;
+  letter-spacing: -0.28px;
+}
+
+.facultySection:not(:last-of-type) {
+  margin-bottom: 80px;
+}
+
+.divider {
+  margin-top: 10px;
+  border: none;
+  border-top: 1px solid $color-border;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1080px) {
+  .container {
+    flex-direction: column;
+    padding: 80px 15px 106.67;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .cards {
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

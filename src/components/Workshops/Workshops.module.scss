@@ -1,0 +1,62 @@
+.workshops {
+  max-width: 1320px;
+  margin: 80px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+
+  .card-container {
+    position: relative;
+  }
+
+  .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+    -webkit-mask-image: url("/icons/card-overlay.svg");
+    mask-image: url("/icons/card-overlay.svg");
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }
+
+  .title {
+    max-width: 238px;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.28px;
+    vertical-align: bottom;
+    z-index: 3;
+    color: #191919;
+    transition: color 0.5s ease;
+  }
+  .card-container:hover {
+    cursor: pointer;
+  }
+  .card-container:hover .hover-image {
+    opacity: 1;
+  }
+
+  .card-container:hover .title {
+    color: #efeeea;
+  }
+}
+
+@media screen and (max-width: 1200px){
+.workshops {
+  flex-direction: column;
+  justify-content: center;
+}
+}

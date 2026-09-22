@@ -1,0 +1,54 @@
+.faculty-container {
+  display: flex;
+  width: 100%;
+}
+.title {
+  padding: 12px 0;
+  letter-spacing: -0.28px;
+font-weight: 300;
+font-size: 28px;
+font-style: normal;
+line-height: 140%;
+color:  #19191999;
+}
+
+.full-width-line {
+  border: 0;
+  height: 1px;
+  background: #19191926;
+  margin-bottom: 32px;
+}
+
+.details {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.faculty-image {
+height: auto;
+width: 42.1%;
+border-radius: 32px;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.faculty-description {
+font-weight: 300;
+font-size: 20px;
+line-height: 140%;
+}
+
+.parentheses-text {
+  color:  #19191999;
+
+}
+
+@media screen and (max-width: 1200px) {
+  .details {
+    flex-direction: column;
+  }
+  
+}

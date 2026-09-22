@@ -1,0 +1,124 @@
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  font-weight: 400;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 1px hsl(215, 20.2%, 65.1%);
+  }
+
+  &[aria-disabled="true"] {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    filter: invert(100%);
+  }
+
+  .link-button__text {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .link-button__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.link-button--size {
+  &-sm {
+    padding: 0 20px;
+    height: 38px;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: -1px;
+    border-radius: 30px;
+
+    .link-button__icon {
+        width: 32px;
+        height: 32px;
+    }
+  }
+  &-md {
+    padding: 0 4px 0 24px;
+    height: 48px;
+    gap: 20px;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.21px;
+    border-radius: 30px;
+
+    .link-button__icon {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+  }
+  &-lg {
+    padding: 0 6px 0 24px;
+    height: 64px;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+    border-radius: 32px;
+
+    .link-button__icon {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  &-icon {
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+    .link-button__icon {
+      width: 20px;
+      height: 20px;
+      padding: 10px;
+
+      svg,
+      img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.link-button--variant {
+  &-default {
+    background-color: #191919;
+    color: hsl(210, 40%, 98%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &-simple {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(222.2, 47.4%, 11.2%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  &-ghost {
+    background-color: #efeeea;
+    color: #191919;
+    border: 1px solid #19191926;
+  }
+}
+
+@media (max-width: 768px) {
+
+}

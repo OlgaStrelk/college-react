@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+.env*
+
+# Оригиналы, не для публикации: настоящие фото и данные сотрудников
+_originals/
+
+# Настоящие контакты организации
+src/config/contacts.ts
+
+# Официальные документы колледжа (123 МБ, публиковать не нужно)
+public/docs/
+
+# Исходное видео hero (79 МБ); заглушка hero-placeholder.mp4 в репозитории есть
+src/assets/videos/*.mov

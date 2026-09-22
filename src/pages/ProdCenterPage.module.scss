@@ -1,0 +1,165 @@
+$font-geologica: "Geologica", Helvetica, sans-serif;
+$color-text-primary: #191919;
+$color-text-secondary: #19191999;
+$color-accent: #0b4a4c;
+$color-border: #19191926;
+
+.prodCenterPage {
+  display: flex;
+  flex-direction: column;
+  .description {
+    font-family: $font-geologica;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 140%;
+    color: $color-text-primary;
+  }
+  .custom-columns-template {
+    grid-template-columns: 1.1fr 1fr;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 20px;
+    gap: 32px;
+  }
+}
+
+.cardsSection {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .cardsTitle {
+    font-family: $font-geologica;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: $color-text-primary;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+
+    @media (max-width: 1080px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      min-height: 320px;
+      padding: 20px 24px;
+      border: 2px solid $color-border;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+
+      .cardIcon {
+        width: 32px;
+        height: 32px;
+        color: $color-text-primary;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+
+      .cardText {
+        font-family: $font-geologica;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 140%;
+        color: $color-text-primary;
+      }
+    }
+  }
+}
+
+.accordionSection {
+  padding: 80px 60px;
+  display: flex;
+  gap: 16px;
+
+  .leftColumn {
+    max-width: 429px;
+  }
+
+  .accordion {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    .accordionItem {
+      width: 100%;
+      border-bottom: 1px solid $color-border;
+
+      .accordionHeader {
+        width: 100%;
+        padding: 32px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: $font-geologica;
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: $color-text-primary;
+        text-align: left;
+
+        .accordionIcon {
+          width: 40px;
+          height: 40px;
+          color: $color-text-primary;
+          transition: transform 0.2s ease;
+
+          &.active {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .accordionContent {
+        padding: 0 20px 32px;
+        font-family: $font-geologica;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 140%;
+        color: $color-text-secondary;
+      }
+    }
+  }
+  .accordionTitle {
+    font-family: $font-geologica;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 140%;
+    letter-spacing: -0.28px;
+    color: $color-text-primary;
+  }
+
+  @media (max-width: 1080px) {
+    flex-direction: column;
+    gap: 32px;
+
+    .leftColumn {
+      max-width: 100%;
+    }
+  }
+}

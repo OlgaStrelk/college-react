@@ -1,0 +1,135 @@
+.admission {
+  max-width: 1320px;
+  margin: 80px auto;
+  padding: 0 20px;
+
+  .admission-container {
+    background-color: hsl(0, 0%, 100%);
+    padding: 80px 60px;
+    border-radius: 42px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+  }
+
+  .content-wrapper {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .font-h1 {
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: -0.96px;
+    line-height: 120%;
+    color: #191919;
+    margin: 0;
+  }
+
+  .description {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 39.2px;
+    color: #191919;
+  }
+
+  .sidebar-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .link {
+    color: #191919;
+    text-decoration: underline;
+    font-weight: 300;
+    letter-spacing: -0.08px;
+  }
+
+  .step-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .step-text {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 44.8px;
+    letter-spacing: -0.32px;
+
+    .step-label {
+      color: #19191999;
+      min-width: 0;
+      flex-shrink: 0;
+    }
+
+    .step-dates {
+      flex: 1;
+      color: #191919;
+    }
+  }
+  .bold {
+    font-weight: 700;
+  }
+  .separator {
+    width: 100%;
+    height: 2px;
+    background-color: hsl(214.3, 31.8%, 91.4%);
+  }
+
+  .font-l {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 140%;
+    letter-spacing: 0;
+    color: #19191999;
+  }
+
+  @media screen and (max-width: 1080px) {
+    .admission-container {
+      padding: 24px;
+    }
+
+    .content-wrapper {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step-text {
+      flex-direction: column;
+      gap: 4px;
+      font-size: 24px;
+      line-height: 33.6px;
+      letter-spacing: -0.24px;
+    }
+
+    .font-h1 {
+      font-size: 36px;
+      letter-spacing: -0.72px;
+    }
+
+    .description {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    .font-l {
+      font-size: 16px;
+      line-height: 22.4px;
+    }
+  }
+}

@@ -1,0 +1,259 @@
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 120px 15px 80px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+
+  @media (max-width: 1080px) {
+    flex-direction: column;
+    padding: 60px 15px 40px;
+  }
+}
+
+.content {
+  flex: 1;
+  background: #efeeea;
+  border-radius: 16px;
+  padding: 40px;
+  min-height: 600px;
+
+  @media (max-width: 1080px) {
+    padding: 24px 20px;
+  }
+}
+
+.pageTitle {
+  font-family: "Geologica", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 120%;
+  margin-bottom: 32px;
+  color: #191919;
+}
+
+.subsection {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.subsectionTitle {
+  font-family: "Geologica", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 130%;
+  margin-bottom: 16px;
+  color: #191919;
+}
+
+.fileList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.fileLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #191919;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &::before {
+    content: "📄";
+    font-size: 20px;
+  }
+
+  &:hover {
+    color: #0b4a4c;
+  }
+}
+
+.empty {
+  font-size: 18px;
+  font-weight: 300;
+  color: #19191999;
+  font-style: italic;
+}
+
+
+.infoBlock {
+  background: #fff;
+  border: 1px solid #19191926;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 32px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+}
+
+.infoList {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 12px 24px;
+  font-size: 16px;
+
+  dt {
+    font-weight: 500;
+    color: #191919;
+  }
+
+  dd {
+    color: #19191999;
+    margin: 0;
+  }
+}
+
+.note {
+  font-size: 15px;
+  color: #19191999;
+  font-style: italic;
+  margin-top: 16px;
+}
+
+.programGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.programCard,
+.standardsList > div {
+  background: #fff;
+  border: 1px solid #19191926;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin: 8px 0;
+    font-size: 16px;
+  }
+}
+
+.standardsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nutritionItem {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: #191919;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #19191999;
+  }
+}
+
+
+.teacherGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.teacherCard {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid #19191926;
+  border-radius: 16px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(25, 25, 25, 0.08);
+  }
+}
+
+.teacherPhoto {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 3px solid #efeeea;
+}
+
+.teacherInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.teacherCard h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+
+.role {
+  font-size: 16px;
+  color: #19191999;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.education,
+.additional {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #191919;
+  margin-bottom: 8px;
+
+  strong {
+    color: #191919;
+  }
+}
+
+.additional {
+  color: #19191999;
+  font-size: 14.5px;
+}

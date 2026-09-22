@@ -1,0 +1,121 @@
+$font-geologica: "Geologica", Helvetica, sans-serif;
+$color-background: #efeeea;
+$color-text-primary: #191919;
+$color-text-secondary: #19191999;
+$color-accent: #0b4a4c;
+$color-border: #19191926;
+
+.portfolio {
+  display: flex;
+  gap: 127px;
+  padding: 80px 60px;
+  background-color: $color-background;
+
+  .menu-max-width {
+    max-width: 318px;
+    min-width: none;
+  }
+
+  .portfolio__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .portfolio__section-header {
+    .portfolio__section-title {
+      font-family: $font-geologica;
+      font-weight: 300;
+      font-size: 32px;
+      letter-spacing: -0.32px;
+      line-height: 140%;
+      color: $color-text-secondary;
+    }
+  }
+
+  .portfolio__sections {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .portfolio__section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 40px;
+    border-left: 2px solid $color-border;
+
+    .portfolio__section-heading {
+      .portfolio__section-heading-text {
+        font-family: $font-geologica;
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 140%;
+        letter-spacing: -0.28px;
+      }
+    }
+
+    .portfolio__section-description {
+      font-family: $font-geologica;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 140%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .text-color-main {
+        color: $color-text-primary;
+      }
+
+      .text-color-secondary {
+        color: $color-text-secondary;
+      }
+    }
+
+    .portfolio__section-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .portfolio__section-item {
+        font-family: $font-geologica;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 140%;
+        color: $color-text-primary;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+
+    .portfolio__content {
+      gap: 32px;
+    }
+
+    .portfolio__section-title {
+      font-size: 24px;
+    }
+
+    .portfolio__section-heading-text,
+    .portfolio__section-description,
+    .portfolio__section-item {
+      font-size: 14px;
+    }
+
+    .portfolio__section {
+      padding-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .portfolio {
+    flex-direction: column;
+  }
+}

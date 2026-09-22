@@ -1,0 +1,53 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 2));
+  }
+}
+
+.teachers {
+  margin: 80px 0;
+  overflow: hidden;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .teachers-carousel {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll 250s linear infinite;
+    transform: translateX(calc(-1 * var(--random-offset, 0px)));
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    .carousel-card {
+      margin-right: 20px;
+    }
+  }
+
+  .button-container {
+    width: fit-content;
+    margin: 80px auto;
+  }
+  @media (max-width: 768px) {
+    .teachers-carousel {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

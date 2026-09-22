@@ -1,0 +1,90 @@
+.faculty-section {
+  max-width: 1320px;
+  margin: 80px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.more-button,
+.description {
+  position: relative;
+  z-index: 10;
+}
+
+// .tab-content {
+//   overflow: hidden;
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
+.mobile-bg,
+.overlay {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .mobile-bg {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      #0D0D0D 0%,
+      #0D0D0D 25%,
+      rgba(13, 13, 13, 0.6) 40%,
+      rgba(13, 13, 13, 0.3) 70%,
+      transparent 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .tab-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 220px;
+    background: linear-gradient(to bottom, #191919 0%, transparent 100%);
+    z-index: 2;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .tab-content::before {
+    height: 50%;
+  }
+    .overlay {
+    background: linear-gradient(
+      to bottom,
+      #0D0D0D 0%,
+      #0D0D0D 35%,
+      rgba(13, 13, 13, 0.6) 55%,
+      rgba(13, 13, 13, 0.3) 70%,
+      transparent 100%
+    );
+}}
+
+@media (max-width: 380px) {
+  .tab-content::before {
+    height: 55%;
+  }
+}

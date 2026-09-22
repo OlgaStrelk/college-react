@@ -1,0 +1,274 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.popup-content {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--stroke-15, #19191926);
+  border-radius: 32px;
+  width: 996px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.popup-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  color: #191919;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.popup-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.popup-image {
+  width: 512px;
+  height: 780px;
+  margin: 10px 0 10px 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid var(--stroke-15, #19191926);
+  }
+}
+
+.popup-text {
+  flex: 1;
+  padding: 40px 40px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.popup-title {
+  font-family: Geologica, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: -0.32px;
+  color: #191919;
+  margin: 0;
+}
+
+.popup-role {
+  font-family: Geologica, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 140%;
+  color: #0b4a4c;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 0;
+  display: inline-block;
+}
+
+.scroll-area {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.popup-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.popup-section-title {
+  font-family: Geologica, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 140%;
+  color: #191919;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 0;
+  display: inline-block;
+}
+
+.popup-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup-list-item {
+  font-family: Geologica, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--Text-secondary, #19191999);
+  position: relative;
+  padding-left: 16px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 9px;
+    left: 1px;
+    background: var(--Text-secondary, #19191999);
+    border-radius: 50%;
+  }
+}
+
+.popup-info {
+  font-family: Geologica, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--Text-secondary, #19191999);
+  margin: 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--stroke-15, #19191926);
+}
+
+.popup-info:last-of-type {
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .popup {
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .popup-content {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 95vh;
+    border-radius: 32px;
+    overflow: hidden;
+  }
+
+  .popup-body {
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+  }
+
+  .popup-image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    margin-bottom: 16px;
+    padding: 16px 16px 0 16px;
+
+    img {
+      height: auto;
+      aspect-ratio: 303.33 / 400;
+      border-radius: 16px;
+    }
+  }
+
+  .popup-text {
+    padding: 0 16px 32px 16px;
+    gap: 16px;
+  }
+
+  .popup-title {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .popup-role {
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+
+  .scroll-area {
+    padding-right: 8px;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+  }
+
+  .popup-section {
+    gap: 16px;
+    padding-bottom: 16px;
+  }
+
+  .popup-section-title {
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+
+  .popup-list-item {
+    font-size: 12px;
+    padding-left: 12px;
+
+    &::before {
+      width: 3px;
+      height: 3px;
+      top: 7px;
+      left: 0;
+    }
+  }
+
+  .popup-info {
+    font-size: 12px;
+    padding-bottom: 16px;
+  }
+}

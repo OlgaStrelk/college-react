@@ -1,0 +1,91 @@
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  backdrop-filter: blur(60px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  display: flex;
+  flex-direction: column;
+
+  &--open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: inherit;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 80px;
+  }
+
+  &__link {
+    font-family: Geologica;
+    font-weight: 300;
+    font-style: Light;
+    font-size: 16px;
+    line-height: 22.4px;
+    text-transform: uppercase;
+
+    color: #191919;
+    text-decoration: none;
+    padding: 12px 0;
+    display: block;
+
+    &:hover,
+    &.active {
+      color: hsl(222.2, 47.4%, 11.2%);
+    }
+  }
+
+  &__button {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 10px 10px 14px;
+    width: calc(100% - 60px);
+    margin: 10px auto 0;
+  }
+
+  .logo-link {
+    display: block;
+    padding: 2px 12px;
+
+    .logo {
+      object-fit: contain;
+      color: #191919;
+    }
+  }
+  @media (min-width: 1080px) {
+    display: none;
+  }
+}
